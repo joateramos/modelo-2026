@@ -1,1 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biografia | Marie Curie</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    <header>
+        <div class="header-container">
+            <h1>Marie Curie</h1>
+            <p>A mulher que moldou a ciência moderna e desafiou as barreiras de sua época.</p>
+        </div>
+    </header>
+
+    <main>
+        <article class="biografia-card">
+            
+            <section class="introducao">
+                <h2>Quem foi Marie Curie?</h2>
+                <p>
+                    Marie Skłodowska Curie (<time datetime="1867-11-07">7 de novembro de 1867</time> – <time datetime="1934-07-04">4 de julho de 1934</time>) 
+                    foi uma física e química polonesa naturalizada francesa. Conhecida por sua pesquisa pioneira sobre a <strong>radioatividade</strong>, 
+                    ela foi a primeira mulher a ganhar um Prêmio Nobel e a <em>única pessoa</em> a ganhar o prêmio em duas áreas científicas diferentes.
+                </p>
+            </section>
+
+            <hr>
+
+            <section class="conquistas">
+                <h3>Principais Legados e Descobertas</h3>
+                <ul>
+                    <li><strong>Elementos Químicos:</strong> Descobriu os elementos Polônio (nomeado em homenagem à sua terra natal) e o Rádio.</li>
+                    <li><strong>Prêmios Nobel:</strong> Prêmio Nobel de Física (1903) e Prêmio Nobel de Química (1911).</li>
+                    <li><strong>Ciência em Campo:</strong> Desenvolveu unidades de radiografia móveis (conhecidas como "Petites Curies") para ajudar os cirurgiões nos campos de batalha da Primeira Guerra Mundial.</li>
+                </ul>
+            </section>
+
+            <hr>
+
+            <section class="interacao-secao">
+                <h3>O quanto a história de Marie Curie te inspira?</h3>
+                <p>Deixe o seu voto para medirmos a relevância dessa figura histórica para a comunidade.</p>
+                
+                <div class="interacao-container">
+                    <button id="btn-gostei" aria-label="Esta biografia é muito inspiradora">
+                        🚀 Inspiradora (<span id="contador-gostei">0</span>)
+                    </button>
+                    <button id="btn-nao-gostei" aria-label="Esta biografia não me inspirou muito">
+                        😐 Neutra (<span id="contador-nao-gostei">0</span>)
+                    </button>
+                </div>
+
+                <p id="mensagem-alerta" role="status" aria-live="polite"></p>
+            </section>
+
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Página Biográfica Experimental. Desenvolvida para fins didáticos.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
