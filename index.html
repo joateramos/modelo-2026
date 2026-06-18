@@ -4,158 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Copa do Mundo FIFA 2026</title>
-    <style>
-        /* Estilos Globais */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f2f5;
-            color: #1a1a1a;
-        }
-
-        /* Banner Principal / Cabeçalho */
-        header {
-            background: linear-gradient(135deg, #1e0b36, #4c1d95, #0ea5e9);
-            color: white;
-            text-align: center;
-            padding: 4rem 1rem;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 3rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            text-shadow: 2px 2px 8px rgba(0,0,0,0.4);
-        }
-
-        header p {
-            margin: 0.8rem 0 0 0;
-            font-size: 1.3rem;
-            font-weight: 300;
-            color: #e0f2fe;
-        }
-
-        /* Container de Conteúdo */
-        .container {
-            max-width: 1100px;
-            margin: -2rem auto 2rem auto;
-            padding: 0 1rem;
-        }
-
-        /* Cartões de Conteúdo */
-        section {
-            background: white;
-            padding: 2.5rem;
-            margin-bottom: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-        }
-
-        h2 {
-            color: #4c1d95;
-            border-bottom: 4px solid #0ea5e9;
-            padding-bottom: 0.5rem;
-            margin-top: 0;
-            font-size: 1.8rem;
-        }
-
-        /* Grid para os Países Sedes */
-        .paises-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-            margin-top: 1.5rem;
-        }
-
-        .pais-card {
-            background: #f8fafc;
-            padding: 1.5rem;
-            border-radius: 8px;
-            border-left: 5px solid #4c1d95;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
-        }
-
-        .pais-card h3 {
-            margin-top: 0;
-            color: #0ea5e9;
-        }
-
-        /* Tabela Comparativa de Formato */
-        .table-responsive {
-            overflow-x: auto;
-            margin-top: 1.5rem;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            background: white;
-        }
-
-        th, td {
-            padding: 14px;
-            text-align: left;
-            border-bottom: 1px solid #e2e8f0;
-        }
-
-        th {
-            background-color: #4c1d95;
-            color: white;
-        }
-
-        tr:nth-child(even) {
-            background-color: #f8fafc;
-        }
-
-        /* Container para Vídeo Responsivo */
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%; /* Proporção 16:9 */
-            padding-top: 30px; 
-            height: 0; 
-            overflow: hidden;
-            margin-top: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-        }
-
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-
-        /* Destaques e Listas */
-        ul {
-            padding-left: 1.2rem;
-        }
-
-        li {
-            margin-bottom: 0.8rem;
-        }
-
-        /* Rodapé */
-        footer {
-            text-align: center;
-            padding: 2rem;
-            background-color: #1e0b36;
-            color: #94a3b8;
-            font-size: 0.95rem;
-        }
-
-        /* Responsividade para telas menores */
-        @media (max-width: 768px) {
-            header h1 { font-size: 2.2rem; }
-            header p { font-size: 1.1rem; }
-            section { padding: 1.5rem; }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -169,6 +18,8 @@
         <section id="visao-geral">
             <h2>A Maior Copa de Todos os Tempos</h2>
             <p>A edição de 2026 da Copa do Mundo FIFA marca um ponto de virada histórico no esporte. Realizada entre os meses de <strong>junho e julho</strong>, a competição espalha-se por toda a América do Norte e traz transformações massivas na estrutura clássica do torneio, abraçando a diversidade global com um número recorde de participantes.</p>
+            
+            <img src="copa.png" alt="Ilustração da Copa do Mundo 2026 nos três países sedes" class="imagem-destaque">
         </section>
 
         <section id="sedes">
