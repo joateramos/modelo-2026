@@ -3,172 +3,260 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Almanaque da Copa do Mundo</title>
+    <title>Copa do Mundo FIFA 2026</title>
     <style>
-        /* Estilos Gerais */
+        /* Estilos Globais */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9;
-            color: #333;
+            background-color: #f0f2f5;
+            color: #1a1a1a;
         }
 
-        /* Cabeçalho */
+        /* Banner Principal / Cabeçalho */
         header {
-            background: linear-gradient(135deg, #006400, #008000, #ffd700);
+            background: linear-gradient(135deg, #1e0b36, #4c1d95, #0ea5e9);
             color: white;
             text-align: center;
-            padding: 2rem 1rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 4rem 1rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
         }
 
         header h1 {
             margin: 0;
-            font-size: 2.5rem;
+            font-size: 3rem;
             text-transform: uppercase;
             letter-spacing: 2px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.4);
         }
 
         header p {
-            margin: 0.5rem 0 0 0;
-            font-size: 1.2rem;
+            margin: 0.8rem 0 0 0;
+            font-size: 1.3rem;
             font-weight: 300;
+            color: #e0f2fe;
         }
 
-        /* Container Principal */
+        /* Container de Conteúdo */
         .container {
-            max-width: 1000px;
-            margin: 2rem auto;
+            max-width: 1100px;
+            margin: -2rem auto 2rem auto;
             padding: 0 1rem;
         }
 
-        /* Seções */
+        /* Cartões de Conteúdo */
         section {
             background: white;
-            padding: 2rem;
+            padding: 2.5rem;
             margin-bottom: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
         }
 
         h2 {
-            color: #006400;
-            border-bottom: 3px solid #ffd700;
+            color: #4c1d95;
+            border-bottom: 4px solid #0ea5e9;
             padding-bottom: 0.5rem;
             margin-top: 0;
+            font-size: 1.8rem;
         }
 
-        /* Tabela de Campeões */
+        /* Grid para os Países Sedes */
+        .paises-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .pais-card {
+            background: #f8fafc;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 5px solid #4c1d95;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        .pais-card h3 {
+            margin-top: 0;
+            color: #0ea5e9;
+        }
+
+        /* Tabela Comparativa de Formato */
+        .table-responsive {
+            overflow-x: auto;
+            margin-top: 1.5rem;
+        }
+
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 1rem;
+            background: white;
         }
 
         th, td {
-            padding: 12px;
+            padding: 14px;
             text-align: left;
-            border-bottom: 1px solid #ddd;
+            border-bottom: 1px solid #e2e8f0;
         }
 
         th {
-            background-color: #006400;
+            background-color: #4c1d95;
             color: white;
         }
 
-        tr:hover {
-            background-color: #f1f1f1;
+        tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+
+        /* Container para Vídeo Responsivo */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* Proporção 16:9 */
+            padding-top: 30px; 
+            height: 0; 
+            overflow: hidden;
+            margin-top: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Destaques e Listas */
+        ul {
+            padding-left: 1.2rem;
+        }
+
+        li {
+            margin-bottom: 0.8rem;
         }
 
         /* Rodapé */
         footer {
             text-align: center;
-            padding: 1.5rem;
-            background-color: #222;
-            color: white;
-            margin-top: 4rem;
-            font-size: 0.9rem;
+            padding: 2rem;
+            background-color: #1e0b36;
+            color: #94a3b8;
+            font-size: 0.95rem;
+        }
+
+        /* Responsividade para telas menores */
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.2rem; }
+            header p { font-size: 1.1rem; }
+            section { padding: 1.5rem; }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Copa do Mundo FIFA</h1>
-        <p>A maior celebração do futebol do planeta</p>
+        <h1>Copa do Mundo FIFA 2026</h1>
+        <p>A maior e mais inovadora edição da história do futebol mundial</p>
     </header>
 
     <div class="container">
         
-        <section id="sobre">
-            <h2>Sobre o Torneio</h2>
-            <p>A <strong>Copa do Mundo FIFA</strong> é uma competição internacional de futebol masculino que ocorre a cada quatro anos. Criada em 1930, a competição reúne as melhores seleções do mundo em busca do tão sonhado troféu de ouro.</p>
-            <p>O torneio move paixões, quebra recordes de audiência e para o planeta durante um mês de pura emoção e rivalidade saudável.</p>
+        <section id="visao-geral">
+            <h2>A Maior Copa de Todos os Tempos</h2>
+            <p>A edição de 2026 da Copa do Mundo FIFA marca um ponto de virada histórico no esporte. Realizada entre os meses de <strong>junho e julho</strong>, a competição espalha-se por toda a América do Norte e traz transformações massivas na estrutura clássica do torneio, abraçando a diversidade global com um número recorde de participantes.</p>
         </section>
 
-        <section id="campeoes">
-            <h2>Os Maiores Vencedores</h2>
-            <p>Confira as seleções que mais vezes ergueram a taça na história do mundial:</p>
+        <section id="sedes">
+            <h2>Três Países, Um Continente</h2>
+            <p>Pela primeira vez na história, o torneio é coorganizado por três nações diferentes, dividindo as partidas por 16 cidades-sede estrategicamente selecionadas:</p>
             
-            <table>
-                <thead>
-                    <tr>
-                        <th>País</th>
-                        <th>Títulos</th>
-                        <th>Anos dos Títulos</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <strong><td>Brasil</td></strong>
-                        <td>5</td>
-                        <td>1958, 1962, 1970, 1994, 2002</td>
-                    </tr>
-                    <tr>
-                        <td>Alemanha</td>
-                        <td>4</td>
-                        <td>1954, 1974, 1990, 2014</td>
-                    </tr>
-                    <tr>
-                        <td>Itália</td>
-                        <td>4</td>
-                        <td>1934, 1938, 1982, 2006</td>
-                    </tr>
-                    <tr>
-                        <td>Argentina</td>
-                        <td>3</td>
-                        <td>1978, 1986, 2022</td>
-                    </tr>
-                    <tr>
-                        <td>França</td>
-                        <td>2</td>
-                        <td>1998, 2018</td>
-                    </tr>
-                    <tr>
-                        <td>Uruguai</td>
-                        <td>2</td>
-                        <td>1930, 1950</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="paises-grid">
+                <div class="pais-card">
+                    <h3>🇺🇸 Estados Unidos</h3>
+                    <p>O país abriga o maior número de cidades do torneio (10 no total). A grande final da competição está marcada para acontecer no espetacular <strong>MetLife Stadium</strong>, em Nova Jersey.</p>
+                </div>
+                <div class="pais-card">
+                    <h3>🇲🇽 México</h3>
+                    <p>Torna-se o primeiro país a receber o torneio em três edições diferentes (1970, 1986 e 2026). O icônico <strong>Estádio Azteca</strong> na Cidade do México sedia a partida de abertura.</p>
+                </div>
+                <div class="pais-card">
+                    <h3>🇨🇦 Canadá</h3>
+                    <p>Estreia como anfitrião da competição masculina principal, trazendo estádios de ponta nas vibrantes cidades de <strong>Toronto</strong> e <strong>Vancouver</strong> para a celebração.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="formato">
+            <h2>A Revolução no Formato</h2>
+            <p>Esqueça o modelo antigo. A Copa do Mundo expandiu suas fronteiras para incluir muito mais sonhos e nações na disputa pelo troféu mais cobiçado da Terra.</p>
+            
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Característica</th>
+                            <th>Formato Antigo (Até 2022)</th>
+                            <th>Novo Formato (2026)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Total de Seleções</strong></td>
+                            <td>32 países</td>
+                            <td>48 países</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Número de Jogos</strong></td>
+                            <td>64 partidas</td>
+                            <td>104 partidas</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Fase de Grupos</strong></td>
+                            <td>8 grupos de 4 equipes</td>
+                            <td>12 grupos de 4 equipes</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Início do Mata-Mata</strong></td>
+                            <td>Oitavas de Final (16 times)</td>
+                            <td>Dezesseis-avos de Final (32 times)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Duração do Torneio</strong></td>
+                            <td>Aproximadamente 30 dias</td>
+                            <td>39 dias de competição</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="midia">
+            <h2>Assista aos Detalhes</h2>
+            <p>Fique por dentro de mais análises e novidades sobre a preparação e as expectativas para este megaevento esportivo:</p>
+            
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/0JElt6upV1g?si=M0ssUEUFTxdIgapp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
         </section>
 
         <section id="curiosidades">
-            <h2>Você Sabia?</h2>
+            <h2>Fatos Marcantes de 2026</h2>
             <ul>
-                <li>O <strong>Brasil</strong> é a única seleção que participou de todas as edições da Copa do Mundo.</li>
-                <li>O maior artilheiro da história das Copas é o alemão <strong>Miroslav Klose</strong>, com 16 gols.</li>
-                <li>A primeira Copa do Mundo, em 1930, foi sediada e vencida pelo <strong>Uruguai</strong>.</li>
+                <li><strong>Mais chances de classificação:</strong> Com a expansão, os dois melhores colocados de cada um dos 12 grupos avançam, junto com os 8 melhores terceiros colocados gerais.</li>
+                <li><strong>Logística Regional:</strong> Para diminuir o cansaço das viagens continentais, os grupos e as partidas foram regionalizados em zonas (Oeste, Central e Leste).</li>
+                <li><strong>Recorde de público:</strong> Devido à imensa capacidade dos estádios norte-americanos, esta edição projeta bater todos os recordes históricos de bilheteria e público presente.</li>
             </ul>
         </section>
 
     </div>
 
     <footer>
-        <p>&copy; 2026 - Página Informativa sobre a Copa do Mundo. Criada com fins didáticos.</p>
+        <p>&copy; 2026 - Guia Informativo Copa do Mundo 2026. Desenvolvido para torcedores e entusiastas do futebol.</p>
     </footer>
 
 </body>
