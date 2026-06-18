@@ -90,6 +90,13 @@
             <h2>Assista aos Detalhes</h2>
             <p>Fique por dentro de mais análises e novidades sobre a preparação e as expectativas para este megaevento esportivo:</p>
             
+            <div style="margin: 1rem 0; display: flex; align-items: center; gap: 10px;">
+                <span style="font-weight: bold;">Gostou do conteúdo? Deixe seu voto:</span>
+                <button style="padding: 8px 16px; background-color: #4c1d95; color: white; border: none; border-radius: 20px; cursor: pointer; font-size: 1rem;">
+                    ❤️ <span>0</span>
+                </button>
+            </div>
+            
             <div class="video-container">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/0JElt6upV1g?si=M0ssUEUFTxdIgapp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
@@ -109,6 +116,20 @@
     <footer>
         <p>&copy; 2026 - Guia Informativo Copa do Mundo 2026. Desenvolvido para torcedores e entusiastas do futebol.</p>
     </footer>
+
+    <script>
+        // 1. Seleciona o botão de like na página
+        const botao = document.querySelector("button");
+        
+        // 2. Adiciona o escutador de eventos para capturar o clique
+        botao.addEventListener("click", botaoClicado);
+        
+        // 3. Função que faz a incrementação automática (+1) no span
+        function botaoClicado() {
+            let texto = botao.querySelector("span");
+            texto.textContent++;
+        }
+    </script>
 
 </body>
 </html>
